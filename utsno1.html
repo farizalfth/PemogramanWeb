@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guci Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('C:/fariz/MT.Prau\'23 Okt/IMG_1221.JPG');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 50px;
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            background-color: rgba(51, 51, 51, 0.8);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li button {
+            background: none;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        nav ul li button:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+        main section {
+            margin-bottom: 20px;
+            display: none; /* Semua section disembunyikan default */
+        }
+
+        main section.active {
+            display: block; /* Menampilkan section yang aktif */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* CSS untuk gambar dengan rasio 1:1 dan tampilan menarik */
+        .image-container {
+            width: 200px; /* Ukuran lebar gambar */
+            height: 200px; /* Ukuran tinggi gambar */
+            overflow: hidden; /* Menghindari gambar yang terpotong */
+            margin: 10px auto;
+            position: relative;
+            border-radius: 12px; /* Menambahkan sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi halus */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mengatur agar gambar memenuhi area container */
+        }
+
+        /* Efek hover untuk gambar */
+        .image-container:hover {
+            transform: scale(1.05); /* Gambar sedikit membesar saat dihover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Membuat bayangan lebih kuat saat dihover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Guci Wonderfull Indonesia</h1>
+        <img src="C:\Kuliah\Tugas\Pemrograman Web\images-removebg-preview.png" alt="Logo Pariwisata Indonesia">
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <ul>
+            <li><button onclick="showSection('home')">Home</button></li>
+            <li><button onclick="showSection('content')">Content</button></li>
+            <li><button onclick="showSection('about')">About</button></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main>
+        <!-- Section Home -->
+        <section id="home" class="active">
+            <h2>Sekilas Guci</h2>
+            <p>Wisata Guci merupakan taman wisata air panas yang ada di daerah Tegal.Kawasan ini 
+                berada di hamparan bukit berada mengelilingi taman wisata Guci dan mengelilingi Gunung 
+                Slamet yang menjulang tinggi di hadapan mata sehingga membuat suasana semakin nyaman.
+                Obyek Wisata Guci yang terletak berada di kota Tegal, Jawa Tengah.</p>
+            <h2>Sejarah Guci</h2>
+                <p>Sejarah Wisata Guci merujuk kepada sebuah guci pemberian Sunan Gunung Jati dan diisi 
+                    dengan doanya untuk meringankan wabah dan bencana yang menimpa masyarakat pada saat 
+                    itu. Obyek Wisata Guci yang menawarkan air panas dari kaki Gunung Slamet ini memang 
+                    menjadi andalan pemerintah Kabupaten Tegal untuk menarik Wisatawan dari berbagai daerah. 
+                    Menurut sejarah, nama Guci berasal dari zaman Walisongo untuk menyebarkan Agama Islam 
+                    di Jawa Tengah bagian Barat, khususnya di sekitar Tegal diutuslah seorang Wali. </p>
+
+            <p> A. Harga Tiket Masuk Wisata Guci Tegal Untuk harga tiket masuk tempat wisata Guci Tegal 
+                dibedakan berdasarkan tujuannya, berikut informasinya: Tiket masuk ke Guciku  Rp. 25.000 per orang 
+                Tiket Masuk Guci Forest Rp. 25.000 per orangTiket masuk Pancuran 5 Gratis</p>
+            <p> B. Jam Buka Wisata Guci Tegal Jam buka wisata di Guci berbeda-beda, rata-rata mulai buka 
+                pukul 08.00-17.00. Kecuali untuk kawasan penginapan dan area camping. Untuk kondisi normal,
+                 wisata Guci Tegal buka setiap hari selama 1 minggu.</p>
+            <p>C. Fasilitas Wisata Guci Tegal Fasilitas wisata di Tegal ini bisa menunjang kenyamanan 
+                para pengunjung, berikut di antaranya: Kantin, warung makanan dan minuman Penjual baju 
+                dan souvenir Area parkir Toilet Mushola Spot selfie Penjual kelinci Area camping dan 
+                outbound Wahana permainan Penyewaan kuda</p>
+        </section>
+
+        <!-- Section Content -->
+        <section id="content">
+            <h2>Destinasi Wisata</h2>
+            <p>Guci adalah salah satu destinasi wisata populer di Kabupaten Tegal, Jawa Tengah, yang menawarkan 
+                pesona alam pegunungan serta pengalaman berendam di pemandian air panas alami. Terletak di kaki
+                 Gunung Slamet pada ketinggian sekitar 1.050 meter di atas permukaan laut, Guci menawarkan udara
+                  sejuk dan panorama yang memukau. .</p>
+            <p>Daftar Nama Wisata di Guci :</p>
+            <table>
+                <tr>
+                    <th>Nama Tempat</th>
+                    <th>Lokasi</th>
+                    <th>Keterangan</th>
+                    <th>Gambar</th>
+                </tr>
+                <tr>
+                    <td>Guciku</td>
+                    <td>Guci</td>
+                    <td>Hot Water Boom Guciku merupakan tempat wisata yang cukup lengkap, terdapat pemandian air panas 
+                        yang bersumber dari kaki Gunung Slamet. Suasana sejuk khas pegunungan sangat cocok untuk berendam 
+                        air hangat dengan pemandangan pepohonan sejuk di sekitar.Hot Water Boom Guciku menyediakan kolam 
+                        air hangat dengan wahana seluncuran, kemudian setelah lelah bermain seluncuran bisa bersantai 
+                        di Lazzy Pool kolam arus menenangkan</td>
+                    <td>
+                        <div class="image-container">
+                            <img src="C:/Kuliah/Tugas/Pemrograman Web/images (1).jpeg" alt="Guciku">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Guci Forest</td>
+                    <td>Guci</td>
+                    <td>Dengan konsep yang memadukan keindahan alam pegunungan dengan fasilitas modern, tempat ini menawarkan 
+                        pengalaman liburan yang tak terlupakan bagi seluruh pengunjung.Guci Forest Tegal menawarkan berbagai 
+                        aktivitas menarik untuk para pengunjung.Di sini terdapat banyak spot foto dengan background alam yang 
+                        indah karena dikelilingi oleh pepohonan pinus</td>
+                    <td>
+                        <div class="image-container">
+                            <img src="C:/Kuliah/Tugas/Pemrograman Web/images (2).jpeg" alt="Guci Forest">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pancuran Lima</td>
+                    <td>Guci</td>
+                    <td>Pemandian pancuran 5 adalah salah satu pemandian air panas alami yang berada di jantung 
+                        pariwisata DTW Guci.Pemandian air panas alami yang satu ini juga merupakan salah satu 
+                        pemandian alami yang termasuk paling awal di guci.Pemandian yang satu ini juga memiliki 
+                        pancuran-pancuran air panas alami seperti di pemandian pancuran 13</td>
+                    <td>
+                        <div class="image-container">
+                            <img src="C:/Kuliah/Tugas/Pemrograman Web/pancuran5-guci.jpg" alt="Pancuran Lima">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section About -->
+        <section id="about">
+            <h2>Tentang Kami</h2>
+            <p>Website ini menyediakan informasi mengenai berbagai destinasi wisata di Guci.Dengan 
+                pesona alam yang menenangkan dan fasilitas yang lengkap, Guci menjadi destinasi 
+                favorit bagi wisatawan lokal maupun luar daerah, terutama bagi mereka yang mencari
+                 ketenangan dan rekreasi di alam terbuka.</p>
+            <h2>Contact Me</h2>
+            <p>(0283) 469077</p>
+            <p>Lokasi : Kecamatan Bumijawa, Kabupaten Tegal, Jawa Tengah</p>
+            <p>Kode Pos : 52466</p>
+            <p> Kode Kemendagri : 33.28.02.2001</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Wonderfull Guci Indonesia.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Menyembunyikan semua section
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Menampilkan section yang dipilih
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
